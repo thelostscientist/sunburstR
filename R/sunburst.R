@@ -120,10 +120,6 @@ sunburst_html <- function(id, style, class, ...){
               )
           )
         )
-        ,tags$div(class = "sunburst-sidebar"
-          , tags$input( type = "checkbox", class = "sunburst-togglelegend", "Legend" )
-          , tags$div( class = "sunburst-legend", style = "visibility:hidden;" )
-        )
       )
     )
   )
