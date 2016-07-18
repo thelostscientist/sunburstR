@@ -157,8 +157,8 @@ HTMLWidgets.widget({
         // Get total size of the tree = value of root node from partition.
         totalSize = path.node().__data__.value;
 
-        drawLegend();
-        d3.select(el).select(".sunburst-togglelegend").on("click", toggleLegend);
+        //drawLegend();
+        //d3.select(el).select(".sunburst-togglelegend").on("click", toggleLegend);
 
        }
 
