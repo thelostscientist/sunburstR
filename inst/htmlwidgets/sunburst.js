@@ -18,7 +18,7 @@ HTMLWidgets.widget({
       var json = instance.json;
 
       // Dimensions of sunburst
-      var width = el.getBoundingClientRect().width - (x.options.legend.w ? x.options.legend.w : 75);
+      var width = el.getBoundingClientRect().width ;
       var height = el.getBoundingClientRect().height - 70;
       var radius = Math.min(width, height) / 2;
 
@@ -420,9 +420,9 @@ HTMLWidgets.widget({
         // remove if already drawn
         d3.select(el).select(".sunburst-legend svg").remove();
 
-        var legend = d3.select(el).select(".sunburst-legend").append("svg")
-            .attr("width", li.w)
-            .attr("height", colors.domain().length * (li.h + li.s));
+        //var legend = d3.select(el).select(".sunburst-legend").append("svg")
+        //    .attr("width", li.w)
+        //    .attr("height", colors.domain().length * (li.h + li.s));
 
         var g = legend.selectAll("g")
             .data( function(){
