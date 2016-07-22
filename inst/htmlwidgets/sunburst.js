@@ -90,9 +90,13 @@ HTMLWidgets.widget({
       var totalSize = 0;
 
       var vis = d3.select(el).select(".sunburst-chart").select("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
           .append("g")
           .attr("id", el.id + "-container")
-          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+          //.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
       var partition = d3.layout.partition()
           .size([2 * Math.PI, radius * radius])
