@@ -16,11 +16,15 @@ HTMLWidgets.widget({
 
       var x = instance.x;
       var json = instance.json;
-
-      // Dimensions of sunburst
-      var width = el.getBoundingClientRect().width ;
-      var height = el.getBoundingClientRect().height - 70;
+      
+      var margin = { top: 30, right: 30, bottom: 30, left: 30 };
+      var width = width - margin.left - margin.right;
+      var height = height - margin.top - margin.bottom;
       var radius = Math.min(width, height) / 2;
+      // Dimensions of sunburst
+      //var width = el.getBoundingClientRect().width ;
+      //var height = el.getBoundingClientRect().height - 70;
+      //var radius = Math.min(width, height) / 2;
 
       d3.select(el).select(".sunburst-chart").append("svg")
         .style("width", width)
