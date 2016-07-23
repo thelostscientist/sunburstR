@@ -17,7 +17,7 @@ HTMLWidgets.widget({
       var x = instance.x;
       var json = instance.json;
       
-      var margin = { top: 30, right: 30, bottom: 30, left: 40 };
+      var margin = { top: 30, right: 30, bottom: 30, left: 30 };
       var width = el.getBoundingClientRect().width - margin.left - margin.right;
       var height = el.getBoundingClientRect().height - margin.top - margin.bottom;
       var radius = Math.min(width, height) / 2;
