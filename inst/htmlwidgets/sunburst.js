@@ -18,7 +18,7 @@ HTMLWidgets.widget({
       var json = instance.json;
       
       var margin = { top: 30, right: 30, bottom: 30, left: 30 };
-      var width = el.getBoundingClientRect().width - margin.left - margin.right;
+      var width = el.getBoundingClientRect().width;
       var height = el.getBoundingClientRect().height - margin.top - margin.bottom;
       var radius = Math.min(width, height) / 2;
       // Dimensions of sunburst
@@ -94,9 +94,7 @@ HTMLWidgets.widget({
           .attr("height", height + margin.top + margin.bottom)
           .append("g")
           .attr("id", el.id + "-container")
-          //.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+          .attr("transform", "translate(" + (width + margin.left) / 2 + "," + (height + margin.top) / 2 + ")");
 
       var partition = d3.layout.partition()
           .size([2 * Math.PI, radius * radius])
