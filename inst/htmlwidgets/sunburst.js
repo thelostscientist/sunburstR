@@ -18,8 +18,8 @@ HTMLWidgets.widget({
       var json = instance.json;
       
       var margin = { top: 30, right: 30, bottom: 30, left: 30 };
-      var width = width - margin.left - margin.right;
-      var height = height - margin.top - margin.bottom;
+      var width = el.getBoundingClientRect().width - margin.left - margin.right;
+      var height = (el.getBoundingClientRect().height - 70) - margin.top - margin.bottom;
       var radius = Math.min(width, height) / 2;
       // Dimensions of sunburst
       //var width = el.getBoundingClientRect().width ;
