@@ -94,9 +94,9 @@ HTMLWidgets.widget({
           .attr("height", height + margin.top + margin.bottom)
           .append("g")
           .attr("id", el.id + "-container")
-          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+          //.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-          //.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
       var partition = d3.layout.partition()
           .size([2 * Math.PI, radius * radius])
