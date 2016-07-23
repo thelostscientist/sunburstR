@@ -19,7 +19,7 @@ HTMLWidgets.widget({
       
       var margin = { top: 30, right: 30, bottom: 30, left: 30 };
       var width = el.getBoundingClientRect().width;
-      var height = el.getBoundingClientRect().height;
+      var height = el.getBoundingClientRect().height - 70;
       var radius = Math.min(width, height) / 2;
       // Dimensions of sunburst
       //var width = el.getBoundingClientRect().width ;
