@@ -172,7 +172,7 @@ HTMLWidgets.widget({
       function mouseover(d) {
 
         var percentage = (100 * d.value / totalSize).toPrecision(3);
-        var percentageString = percentage + "%" + "of items in this category";
+        var percentageString = percentage + "%" + " \n of items in this category";
         if (percentage < 0.1) {
           percentageString = "< 0.1%";
         }
